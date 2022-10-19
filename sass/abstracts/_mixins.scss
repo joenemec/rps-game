@@ -1,0 +1,20 @@
+// ========== MIXINS ==========
+@mixin flex-col-align-just($col, $align, $justify) {
+  display: flex;
+  flex-direction: $col;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin top-style {
+  height: 2rem;
+  border: 1px solid #1111;
+  box-shadow: 0 2px 2px #2f2725aa;
+}
+
+@mixin top-corner-style($one, $two, $three, $four) {
+  border-top-right-radius: $one;
+  border-top-left-radius: $two;
+  border-bottom-right-radius: $three;
+  border-bottom-left-radius: $four;
+}

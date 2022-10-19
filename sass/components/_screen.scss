@@ -1,0 +1,132 @@
+// ========== SCREEN SECTION ==========
+.device__screen-border {
+  position: relative;
+  @include flex-col-align-just($col, $align-init, $justify-init);
+  margin: 1.5rem auto 0.5rem auto;
+  height: 21.9rem;
+  width: 85%;
+  background-color: $screen-bor-bg;
+  border-radius: 0.95rem 0.95rem 4.4rem 0.95rem;
+  box-shadow: $screen-bor-shadow;
+
+  .accents {
+    content: "";
+    margin: 0.5rem auto;
+    width: 90%;
+    height: 0.13rem;
+  }
+
+  .accents__red {
+    background-color: $red-color;
+  }
+
+  .accents__blue {
+    background-color: $blue-color;
+  }
+
+  .accents__slogan {
+    position: absolute;
+    display: inline-block;
+    top: 1.5%;
+    right: 20%;
+    padding: 1% 1vw;
+    background-color: $screen-bor-bg;
+    z-index: 1;
+  }
+
+  .screen-display {
+    margin: 0 auto;
+    width: 75%;
+    height: 17.5rem;
+    background-color: $screen-dsply-off-bg;
+    border-radius: 0.13rem;
+    transition: 1s ease-in;
+    z-index: 2;
+
+    &--toggle {
+      background-color: $screen-dsply-on-bg;
+      border-radius: 0.13rem;
+      box-shadow: $screen-dsply-shadow;
+      transition: 1s ease-in;
+    }
+
+    &__scoreboard {
+      @include flex-col-align-just($col-init, $align-ctr, $justify-arnd);
+      width: 100%;
+      height: 2.5rem;
+      border-bottom: $screen-board-bor;
+    }
+
+    &__game {
+      position: relative;
+      @include flex-col-align-just($col-init, $align-ctr, $justify-ctr);
+      height: 17.5rem;
+      line-height: 1.6;
+      opacity: 0.6;
+      overflow: hidden;
+      filter: blur(0.7px);
+
+      .game__logo {
+        position: absolute;
+        top: -2.2rem;
+        width: 11.3rem;
+        height: 2.2rem;
+        background: $black-color;
+
+        &:after {
+          content: "®";
+          position: absolute;
+          top: 0;
+          right: -0.88rem;
+        }
+
+        &.animate {
+          animation-name: logo;
+          animation-duration: 4s;
+          animation-iteration-count: 1;
+          animation-fill-mode: forwards;
+          animation-timing-function: linear;
+        }
+      }
+
+      .game__splash {
+        display: none;
+
+        &.show {
+          display: initial;
+        }
+      }
+
+      .game__text {
+        position: absolute;
+        text-align: center;
+      }
+
+      .game__images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+        width: 100%;
+        height: 100%;
+
+        & img {
+          width: 90%;
+        }
+
+        #images__user,
+        #images__computer {
+          @include flex-col-align-just($col, $align-ctr, $justify-ctr);
+          height: 100%;
+        }
+
+        #images__computer img {
+          transform: scaleX(-1);
+        }
+      }
+    }
+
+    .hidden {
+      display: none;
+    }
+  }
+}

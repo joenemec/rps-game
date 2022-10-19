@@ -1,0 +1,68 @@
+// ========== TYPOGRAPHY ==========
+.top__on-off-text {
+  text-transform: uppercase;
+  text-shadow: 0.063rem 0.063rem 0.13rem #0006;
+  font-family: $f-arial;
+  font-size: 0.65em;
+  color: #ddd9d5;
+}
+
+.title__name {
+  font-family: $f-otomanopee;
+  font-size: 0.9em;
+  color: $blue-color;
+
+  &-span {
+    font-family: sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 1.5em;
+  }
+}
+
+.device__screen-border {
+  font-family: $f-2p;
+
+  .accents__slogan {
+    word-spacing: 0.125rem;
+    text-transform: uppercase;
+    text-shadow: 0 0 0.125rem #eee9;
+    font-family: Arial, sans-serif;
+    font-size: 0.63rem;
+    color: $white-color;
+  }
+
+  .screen__display {
+    text-transform: uppercase;
+    font-size: 0.8em;
+
+    .game__logo {
+      font-size: 2em;
+
+      &:after {
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
+
+.controls__letters {
+  font-weight: bolder;
+  font-size: 0.8rem;
+  color: $blue-color;
+}
+
+.settings__label {
+  letter-spacing: 0.063rem;
+  text-transform: uppercase;
+  font-size: 0.6em;
+  color: $blue-color;
+}
+
+.bottom__phone-text {
+  text-transform: uppercase;
+  text-shadow: 0.063rem 0.063rem 0.125rem #0006;
+  font-family: $f-arial;
+  font-size: 0.6em;
+  color: #bcbcbc;
+}

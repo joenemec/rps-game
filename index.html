@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/07c53b717a.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- javascript -->
+    <script defer src="./script.js"></script>
+    <title>RPS Game</title>
+  </head>
+  <body>
+    <div class="console">
+      <!-- ========== DEVICE ========== -->
+      <main class="device">
+        <!-- ========== POWER SECTION ========== -->
+        <section class="device__power">
+          <div class="power__btn"></div>
+        </section>
+
+        <!-- ========== TOP SECTION ========== -->
+        <section class="device__top">
+          <div class="top__corner top__corner-left"></div>
+          <div class="top__center"></div>
+          <div class="top__corner top__corner-right"></div>
+          <div class="top__on-off">
+            <p class="top__on-off-text">
+              <i class="fas fa-caret-left fa-2x"></i>Off - On<i
+                class="fas fa-caret-right fa-2x"
+              ></i>
+            </p>
+          </div>
+          <div class="top__triple">
+            <div class="top__triple-line"></div>
+            <div class="top__triple-line"></div>
+            <div class="top__triple-line"></div>
+          </div>
+        </section>
+
+        <!-- ========== SCREEN SECTION ========== -->
+        <section class="device__screen-border">
+          <div class="screen-border__accents">
+            <div class="accents accents__red"></div>
+            <div class="accents accents__blue"></div>
+            <div class="accents__slogan">Rock Paper Scissors Shoot!</div>
+          </div>
+          <div class="screen-display">
+            <div class="screen-display__scoreboard hidden">
+              <p class="scoreboard__user">
+                You: <span id="scoreboard__user-score">0</span>
+              </p>
+              <p class="scoreboard__computer">
+                Computer: <span id="scoreboard__computer-score">0</span>
+              </p>
+            </div>
+            <div class="screen-display__game">
+              <div class="game__logo"></div>
+              <div class="game__splash">
+                <h3 class="splash__start">-PRESS START-</h3>
+              </div>
+              <div class="game__text"></div>
+              <div class="game__images hidden">
+                <div id="images__user"></div>
+                <div id="images__computer"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========== TITLE SECTION ========== -->
+        <section class="device__title">
+          <h1 class="title__name">
+            Rock Paper Scissors <span class="title__name-span">GAME</span>
+          </h1>
+        </section>
+
+        <!-- ========== D-PAD SECTION ========== -->
+        <section class="device__pad">
+          <div class="pad__direction">
+            <div
+              class="pad__direction-btn pad__direction-up pad__direction-shading"
+            >
+              <div class="btn__group btn__group-y">
+                <div class="btn__group-line"></div>
+                <div class="btn__group-line"></div>
+                <div class="btn__group-line"></div>
+              </div>
+            </div>
+            <div
+              class="pad__direction-btn pad__direction-right pad__direction-shading"
+            >
+              <div class="btn__group">
+                <div class="btn__group-line"></div>
+                <div class="btn__group-line"></div>
+                <div class="btn__group-line"></div>
+              </div>
+            </div>
+            <div class="pad__direction-btn pad__direction-center">
+              <div class="center__btn-gap"></div>
+            </div>
+            <div
+              class="pad__direction-btn pad__direction-left pad__direction-shading"
+            >
+              <div class="btn__group">
+                <div class="btn__group-line"></div>
+                <div class="btn__group-line"></div>
+                <div class="btn__group-line"></div>
+              </div>
+            </div>
+            <div class="pad__direction-btn pad__direction-down">
+              <div class="btn__group btn__group-y">
+                <div class="btn__group-line"></div>
+                <div class="btn__group-line"></div>
+                <div class="btn__group-line"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ========== FUNCTIONAL BUTTON SECTION ========== -->
+          <div class="device__controls">
+            <div class="controls__selection">
+              <button
+                class="controls__selection-btn controls__selection-btn--1"
+                data-btn="1"
+                value="0"
+              ></button>
+              <button
+                class="controls__selection-btn controls__selection-btn--2"
+                data-btn="2"
+                value="1"
+              ></button>
+              <button
+                class="controls__selection-btn controls__selection-btn--3"
+                data-btn="3"
+                value="2"
+              ></button>
+            </div>
+            <div class="controls__letters">
+              <div class="letters">R</div>
+              <div class="letters">P</div>
+              <div class="letters">S</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========== SETTINGS SECTION ========== -->
+        <section class="device__settings">
+          <div class="settings">
+            <div class="settings__selection">
+              <button class="settings__btn" id="reset__btn"></button>
+            </div>
+            <div class="settings__label reset__label">Reset</div>
+          </div>
+          <div class="settings">
+            <div class="settings__selection">
+              <button class="settings__btn" id="start__btn"></button>
+            </div>
+            <div class="settings__label start__label">Start</div>
+          </div>
+        </section>
+
+        <!-- ========== BOTTOM SECTION ========== -->
+        <section class="device__bottom">
+          <div class="bottom">
+            <div class="bottom__phone">
+              <p class="bottom__phone-text">
+                <i class="fas fa-headphones"></i> Phones
+              </p>
+            </div>
+            <div class="bottom__triple">
+              <div class="bottom__triple-line"></div>
+              <div class="bottom__triple-line"></div>
+              <div class="bottom__triple-line"></div>
+            </div>
+          </div>
+          <div class="bottom__speaker">
+            <div class="bottom__speaker-corner"></div>
+            <div class="bottom__speaker-corner"></div>
+            <div class="bottom__speaker-corner"></div>
+            <div class="bottom__speaker-corner"></div>
+            <div class="bottom__speaker-corner"></div>
+            <div class="bottom__speaker-corner"></div>
+          </div>
+        </section>
+      </main>
+
+      <!-- ========== DEVICE SHADOW SECTION ========== -->
+      <section class="device__shadow">
+        <div class="shadow"></div>
+      </section>
+    </div>
+  </body>
+</html>

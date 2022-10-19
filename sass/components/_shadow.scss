@@ -1,0 +1,18 @@
+// ========== DEVICE SHADOW SECTION ==========
+.device__shadow {
+  position: relative;
+  @include flex-col-align-just($col-init, $align-ctr, $justify-ctr);
+
+  .shadow {
+    position: absolute;
+    top: 1rem;
+    margin-inline: auto;
+    width: 31rem;
+    height: 5rem;
+    background-color: $black-color;
+    border-radius: 100%;
+    filter: blur(10px);
+    opacity: 0.2;
+    z-index: 99;
+  }
+}

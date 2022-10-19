@@ -1,0 +1,39 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+
+@import "components/bottom";
+@import "components/buttons";
+@import "components/pad";
+@import "components/power";
+@import "components/screen";
+@import "components/shadow";
+@import "components/title";
+@import "components/top";
+
+// FONTS
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Otomanopee+One&family=Press+Start+2P&display=swap");
+
+// ========== DEVICE ==========
+.console {
+  position: relative;
+  @include flex-col-align-just($col, $align-ctr, $justify-ctr);
+  min-height: 100vh;
+
+  .device {
+    position: relative;
+    margin: 1rem auto;
+    width: 30rem;
+    height: 49rem;
+    background-color: $device-bg;
+    background-image: $device-crnr-bg;
+    border-radius: 0.95rem 0.95rem 5rem 0.95rem;
+    box-shadow: $device-shadow;
+  }
+}

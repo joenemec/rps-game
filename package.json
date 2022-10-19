@@ -1,0 +1,14 @@
+{
+  "name": "vanilla-rps-game",
+  "version": "1.0.0",
+  "description": "Rock, Paper, Scissors Game",
+  "main": "script.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Joseph Nemec",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.3"
+  }
+}

@@ -1,0 +1,18 @@
+// ========== POWER SECTION ==========
+.device__power {
+  position: relative;
+
+  .power__btn {
+    position: absolute;
+    bottom: 0.001rem;
+    left: 3.35rem;
+    height: 0.7rem;
+    width: 1.5em;
+    background-color: $power-btn-bg;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    box-shadow: $power-btn-shadow;
+    cursor: pointer;
+    transition: 0.8s ease-in;
+  }
+}

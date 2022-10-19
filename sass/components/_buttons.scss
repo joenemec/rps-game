@@ -1,0 +1,77 @@
+// ========== FUNCTIONAL BUTTON SECTION ==========
+.device__controls {
+  position: relative;
+  width: 48%;
+  transform: rotate(-25deg);
+
+  .controls__selection {
+    @include flex-col-align-just($col-init, $align-ctr, $justify-btwn);
+    padding: 0.6em;
+    background: $cntrls-select-bg;
+    border-radius: 63rem;
+
+    &-btn {
+      width: 3rem;
+      height: 3rem;
+      background: $cntrls-btn-bg;
+      border: none;
+      border-radius: 50%;
+      box-shadow: $cntrls-btn-shadow;
+      cursor: pointer;
+
+      &:hover {
+        background: $cntrls-btn-bg-hover;
+        box-shadow: $cntrls-btn-shadow-hover;
+        transform: scale(0.95);
+      }
+    }
+  }
+
+  .controls__letters {
+    @include flex-col-align-just($col-init, $align-ctr, $justify-arnd);
+  }
+}
+
+// ========== SETTINGS SECTION ==========
+.device__settings {
+  @include flex-col-align-just($col-init, $align-end, $justify-ctr);
+  height: 4.5rem;
+  transform: rotate(-25deg);
+
+  .settings {
+    @include flex-col-align-just($col, $align-ctr, $justify-ctr);
+
+    &:first-child {
+      position: relative;
+      bottom: 1.5rem;
+    }
+
+    &__selection {
+      display: flex;
+      padding: 0.3rem 0.4rem;
+      background: $settings-select-bg;
+      border-radius: 0.95rem;
+      box-shadow: $settings-select-shadow;
+
+      .settings__btn {
+        width: 2.8rem;
+        height: 0.6rem;
+        background: $settings-btn-bg;
+        border: none;
+        border-radius: 0.95rem;
+        box-shadow: $settings-btn-shadow;
+
+        &:hover {
+          background: #9693a5;
+          box-shadow: $settings-btn-shadow-hover;
+          cursor: pointer;
+          transform: scale(0.95);
+        }
+      }
+    }
+
+    &__label {
+      margin-top: 0.5em;
+    }
+  }
+}

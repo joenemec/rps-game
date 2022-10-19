@@ -1,0 +1,484 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Otomanopee+One&family=Press+Start+2P&display=swap");
+@keyframes logo {
+  0% {
+    top: -80px; }
+  100% {
+    top: 120px; } }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  font-weight: 700;
+  font-family: "Orbitron", sans-serif;
+  background-color: #c36281af; }
+
+.top__on-off-text {
+  text-transform: uppercase;
+  text-shadow: 0.063rem 0.063rem 0.13rem #0006;
+  font-family: Arial, sans-serif;
+  font-size: 0.65em;
+  color: #ddd9d5; }
+
+.title__name {
+  font-family: "Otomanopee One", sans-serif;
+  font-size: 0.9em;
+  color: #1d119f; }
+  .title__name-span {
+    font-family: sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 1.5em; }
+
+.device__screen-border {
+  font-family: "Press Start 2P", sans-serif; }
+  .device__screen-border .accents__slogan {
+    word-spacing: 0.125rem;
+    text-transform: uppercase;
+    text-shadow: 0 0 0.125rem #eee9;
+    font-family: Arial, sans-serif;
+    font-size: 0.63rem;
+    color: #fff; }
+  .device__screen-border .screen__display {
+    text-transform: uppercase;
+    font-size: 0.8em; }
+    .device__screen-border .screen__display .game__logo {
+      font-size: 2em; }
+      .device__screen-border .screen__display .game__logo:after {
+        font-size: 0.7rem; }
+
+.controls__letters {
+  font-weight: bolder;
+  font-size: 0.8rem;
+  color: #1d119f; }
+
+.settings__label {
+  letter-spacing: 0.063rem;
+  text-transform: uppercase;
+  font-size: 0.6em;
+  color: #1d119f; }
+
+.bottom__phone-text {
+  text-transform: uppercase;
+  text-shadow: 0.063rem 0.063rem 0.125rem #0006;
+  font-family: Arial, sans-serif;
+  font-size: 0.6em;
+  color: #bcbcbc; }
+
+.device__bottom {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "   .    deviceBottom    speaker     "; }
+  .device__bottom .bottom {
+    grid-area: deviceBottom;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; }
+    .device__bottom .bottom__phone {
+      display: flex;
+      flex-direction: initial;
+      align-items: center;
+      justify-content: center;
+      width: 4em;
+      height: 1em;
+      text-shadow: 0.06rem 0.06rem 0.06rem #0003;
+      border-radius: 0.63rem;
+      box-shadow: 0.06rem 0.13rem 0.13rem #0005 inset, 0 -0.06rem 0.13rem #b5b5b5dd inset, 0 -0.06rem 0.13rem #6c6c6c inset; }
+    .device__bottom .bottom__triple {
+      display: flex;
+      flex-direction: initial;
+      align-items: flex-end;
+      justify-content: flex-end;
+      width: 3rem; }
+      .device__bottom .bottom__triple-line {
+        margin-left: 0.3rem;
+        height: 0.8rem;
+        width: 0.3rem;
+        background-image: radial-gradient(transparent, #0003); }
+  .device__bottom .bottom__speaker {
+    grid-area: speaker;
+    position: relative;
+    bottom: 2rem;
+    left: 1.3rem;
+    display: flex;
+    flex-direction: initial;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+    transform: rotate(-30deg); }
+    .device__bottom .bottom__speaker-corner {
+      width: 0.6rem;
+      height: 5rem;
+      background: linear-gradient(to bottom, #959395 0%, #9f9f9f 25%, #919091 55%, #6b686c 95%, #716f71 100%);
+      border-radius: 0.63rem;
+      overflow: hidden; }
+    .device__bottom .bottom__speaker-corner:not(:first-child)::after {
+      content: "";
+      display: block;
+      height: 4em;
+      width: 0.25rem;
+      background-color: #090708;
+      border-radius: 0.63rem; }
+
+.device__controls {
+  position: relative;
+  width: 48%;
+  transform: rotate(-25deg); }
+  .device__controls .controls__selection {
+    display: flex;
+    flex-direction: initial;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6em;
+    background: linear-gradient(10deg, #eff2f099, #ae9fa699);
+    border-radius: 63rem; }
+    .device__controls .controls__selection-btn {
+      width: 3rem;
+      height: 3rem;
+      background: radial-gradient(26px 26px at 24px 27px, #6f0119 75%, #a20d37 90%, #ef94b2);
+      border: none;
+      border-radius: 50%;
+      box-shadow: 0.063rem -0.25rem 0 -0.2rem #7c4b5b inset, -0.2rem 0.43rem 0.3rem -0.13rem #1e0009, 0.06rem -0.063rem 0 0.13rem #53182b;
+      cursor: pointer; }
+      .device__controls .controls__selection-btn:hover {
+        background: radial-gradient(30px 26px at 24px 27px, #6b0118 75%, #960b33 90%, #db84a1);
+        box-shadow: 0.063rem -0.038rem 0.063rem 0.2rem #000000d1, inset 0.13rem -0.13rem 0.13rem #40404034, inset -0.13rem 0.2rem 0.13rem #40404034;
+        transform: scale(0.95); }
+  .device__controls .controls__letters {
+    display: flex;
+    flex-direction: initial;
+    align-items: center;
+    justify-content: space-around; }
+
+.device__settings {
+  display: flex;
+  flex-direction: initial;
+  align-items: flex-end;
+  justify-content: center;
+  height: 4.5rem;
+  transform: rotate(-25deg); }
+  .device__settings .settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .device__settings .settings:first-child {
+      position: relative;
+      bottom: 1.5rem; }
+    .device__settings .settings__selection {
+      display: flex;
+      padding: 0.3rem 0.4rem;
+      background: linear-gradient(to top, #eff2f0, #ae9fa6);
+      border-radius: 0.95rem;
+      box-shadow: -0.25rem 0.25rem 0.2rem -0.2rem #585858bb inset, 0.25rem -0.25rem 0.2rem -0.2rem #fffc inset; }
+      .device__settings .settings__selection .settings__btn {
+        width: 2.8rem;
+        height: 0.6rem;
+        background: #9e9baf;
+        border: none;
+        border-radius: 0.95rem;
+        box-shadow: -0.13rem -0.13rem 0.3rem #585858bb inset, 0.13rem 0.13rem 0.3rem #fff3 inset, 0.13rem 0.13rem 0.4rem #0007, -0.063rem 0.13rem 0.2rem #000d; }
+        .device__settings .settings__selection .settings__btn:hover {
+          background: #9693a5;
+          box-shadow: -0.2rem -0.2rem 0.3rem rgba(0, 0, 0, 0.352) inset, 0.2rem 0.2rem 0.3rem rgba(219, 219, 219, 0.2) inset, 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.545), -0.13rem 0.2rem 0.2rem black;
+          cursor: pointer;
+          transform: scale(0.95); }
+    .device__settings .settings__label {
+      margin-top: 0.5em; }
+
+.device__pad {
+  display: flex;
+  flex-direction: initial;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem; }
+  .device__pad .pad__direction {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "   .    upButton    .     " "leftButton   centerButton  rightButton" "   .   downButton    .    ";
+    padding: 0.8rem;
+    width: 7.5rem;
+    height: 7.5rem;
+    background-color: #d5ced6;
+    border-radius: 50%; }
+    .device__pad .pad__direction-btn {
+      display: flex;
+      flex-direction: initial;
+      align-items: center;
+      justify-content: initial;
+      background-color: #000;
+      box-shadow: 0 0 0.063rem 0.25rem #0b040c, 0 0.3rem 0.13rem 0.063rem #131313; }
+    .device__pad .pad__direction-up {
+      grid-area: upButton;
+      border-top-left-radius: 0.3rem;
+      border-top-right-radius: 0.3rem; }
+    .device__pad .pad__direction-shading {
+      border: #363439 0.13rem solid;
+      border-top: #b7bec8 0.13rem solid; }
+    .device__pad .pad__direction-right {
+      grid-area: rightButton;
+      border-top-right-radius: 0.3rem;
+      border-bottom-right-radius: 0.3rem; }
+    .device__pad .pad__direction-center {
+      grid-area: centerButton;
+      border: #060206 0.13rem solid;
+      border-radius: 0.063rem;
+      z-index: 1; }
+      .device__pad .pad__direction-center .center__btn-gap {
+        width: 100%;
+        height: 100%;
+        background: conic-gradient(#dde8f777 0 1%, transparent 10% 35%, #dde8f7 50%, transparent 65% 90%, #dde8f777 99%);
+        border-radius: 50%; }
+    .device__pad .pad__direction-left {
+      grid-area: leftButton;
+      border-top-left-radius: 0.3rem;
+      border-bottom-left-radius: 0.3rem; }
+    .device__pad .pad__direction-down {
+      grid-area: downButton;
+      border: #363439 0.13rem solid;
+      border-bottom-left-radius: 0.3rem;
+      border-bottom-right-radius: 0.3rem; }
+    .device__pad .pad__direction .btn__group {
+      display: flex;
+      flex-direction: initial;
+      align-items: initial;
+      justify-content: space-around;
+      width: 100%; }
+      .device__pad .pad__direction .btn__group-line {
+        height: 1.2rem;
+        width: 0.2rem;
+        background-color: #181818;
+        border-radius: 0.3rem; }
+    .device__pad .pad__direction .btn__group-y {
+      transform: rotate(90deg); }
+
+.device__power {
+  position: relative; }
+  .device__power .power__btn {
+    position: absolute;
+    bottom: 0.001rem;
+    left: 3.35rem;
+    height: 0.7rem;
+    width: 1.5em;
+    background-color: #65646b;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    box-shadow: inset 0.063rem 0.063rem 0.2rem #45444b80;
+    cursor: pointer;
+    transition: 0.8s ease-in; }
+
+.device__screen-border {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: initial;
+  justify-content: initial;
+  margin: 1.5rem auto 0.5rem auto;
+  height: 21.9rem;
+  width: 85%;
+  background-color: #848190;
+  border-radius: 0.95rem 0.95rem 4.4rem 0.95rem;
+  box-shadow: 0 0 0.13rem #514c65, 0 -0.063rem 0.063rem #161118, 0 -0.13rem 0.063rem #a0939f, 0 -0.25rem 0.063rem #514c65, 0 0 0.13rem 0.13rem #9c99ac88 inset, 0 -0.063rem 0.13rem 0.063rem #0006 inset; }
+  .device__screen-border .accents {
+    content: "";
+    margin: 0.5rem auto;
+    width: 90%;
+    height: 0.13rem; }
+  .device__screen-border .accents__red {
+    background-color: #bd366f; }
+  .device__screen-border .accents__blue {
+    background-color: #1d119f; }
+  .device__screen-border .accents__slogan {
+    position: absolute;
+    display: inline-block;
+    top: 1.5%;
+    right: 20%;
+    padding: 1% 1vw;
+    background-color: #848190;
+    z-index: 1; }
+  .device__screen-border .screen-display {
+    margin: 0 auto;
+    width: 75%;
+    height: 17.5rem;
+    background-color: #2e2e2e66;
+    border-radius: 0.13rem;
+    transition: 1s ease-in;
+    z-index: 2; }
+    .device__screen-border .screen-display--toggle {
+      background-color: #819330;
+      border-radius: 0.13rem;
+      box-shadow: inset -0.75rem 0.25rem 1.4rem 0 #00000033, 0 0 0.3rem 0.13rem #ffffff0d;
+      transition: 1s ease-in; }
+    .device__screen-border .screen-display__scoreboard {
+      display: flex;
+      flex-direction: initial;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+      height: 2.5rem;
+      border-bottom: #090708cc 0.3rem solid; }
+    .device__screen-border .screen-display__game {
+      position: relative;
+      display: flex;
+      flex-direction: initial;
+      align-items: center;
+      justify-content: center;
+      height: 17.5rem;
+      line-height: 1.6;
+      opacity: 0.6;
+      overflow: hidden;
+      filter: blur(0.7px); }
+      .device__screen-border .screen-display__game .game__logo {
+        position: absolute;
+        top: -2.2rem;
+        width: 11.3rem;
+        height: 2.2rem;
+        background: #000; }
+        .device__screen-border .screen-display__game .game__logo:after {
+          content: "®";
+          position: absolute;
+          top: 0;
+          right: -0.88rem; }
+        .device__screen-border .screen-display__game .game__logo.animate {
+          animation-name: logo;
+          animation-duration: 4s;
+          animation-iteration-count: 1;
+          animation-fill-mode: forwards;
+          animation-timing-function: linear; }
+      .device__screen-border .screen-display__game .game__splash {
+        display: none; }
+        .device__screen-border .screen-display__game .game__splash.show {
+          display: initial; }
+      .device__screen-border .screen-display__game .game__text {
+        position: absolute;
+        text-align: center; }
+      .device__screen-border .screen-display__game .game__images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+        width: 100%;
+        height: 100%; }
+        .device__screen-border .screen-display__game .game__images img {
+          width: 90%; }
+        .device__screen-border .screen-display__game .game__images #images__user,
+        .device__screen-border .screen-display__game .game__images #images__computer {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 100%; }
+        .device__screen-border .screen-display__game .game__images #images__computer img {
+          transform: scaleX(-1); }
+    .device__screen-border .screen-display .hidden {
+      display: none; }
+
+.device__shadow {
+  position: relative;
+  display: flex;
+  flex-direction: initial;
+  align-items: center;
+  justify-content: center; }
+  .device__shadow .shadow {
+    position: absolute;
+    top: 1rem;
+    margin-inline: auto;
+    width: 31rem;
+    height: 5rem;
+    background-color: #000;
+    border-radius: 100%;
+    filter: blur(10px);
+    opacity: 0.2;
+    z-index: 99; }
+
+.device__title {
+  position: relative;
+  margin: 0 2.3rem; }
+
+.device__top {
+  position: relative;
+  display: flex;
+  flex-direction: initial;
+  align-items: initial;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+  border-bottom: #11111129 0.063rem solid;
+  border-top-left-radius: 0.95rem;
+  border-top-right-radius: 0.95rem;
+  box-shadow: 0 1.13rem 0.3rem -0.63rem #fff inset; }
+  .device__top .top__corner {
+    width: 1.8rem;
+    height: 2rem;
+    border: 1px solid #1111;
+    box-shadow: 0 2px 2px #2f2725aa; }
+  .device__top .top__center {
+    width: 85%;
+    border-radius: 0.2rem;
+    height: 2rem;
+    border: 1px solid #1111;
+    box-shadow: 0 2px 2px #2f2725aa; }
+  .device__top .top__corner-left {
+    border-top-right-radius: 0.063rem;
+    border-top-left-radius: 0.95rem;
+    border-bottom-right-radius: 0.2rem;
+    border-bottom-left-radius: 0.063rem; }
+  .device__top .top__corner-right {
+    border-top-right-radius: 0.95rem;
+    border-top-left-radius: 0.063rem;
+    border-bottom-right-radius: 0.063rem;
+    border-bottom-left-radius: 0.2rem; }
+  .device__top .top__on-off {
+    position: absolute;
+    top: 0.3em;
+    left: 2.8em; }
+    .device__top .top__on-off-text {
+      display: flex;
+      flex-direction: initial;
+      align-items: center;
+      justify-content: center;
+      height: 1.2rem;
+      width: 4.5rem;
+      border-radius: 0.63rem;
+      box-shadow: 0 0.063rem 0.13rem #0005 inset, 0 -0.063rem 0.13rem #fffc inset; }
+      .device__top .top__on-off-text i {
+        padding: 0.13rem; }
+  .device__top .top__triple {
+    position: absolute;
+    left: 3em;
+    bottom: 2.2rem;
+    display: flex;
+    flex-direction: initial;
+    align-items: initial;
+    justify-content: space-evenly;
+    width: fit-content; }
+    .device__top .top__triple-line {
+      margin-left: 0.3rem;
+      height: 0.3em;
+      width: 0.3rem;
+      background-image: radial-gradient(transparent, #3f3f3f72); }
+
+.console {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; }
+  .console .device {
+    position: relative;
+    margin: 1rem auto;
+    width: 30rem;
+    height: 49rem;
+    background-color: #d7d2d8;
+    background-image: linear-gradient(-30deg, #a6a6a6 0 4.7rem, transparent 5rem), linear-gradient(transparent 95%, rgba(61, 61, 61, 0.267) 98.5%, rgba(56, 56, 56, 0.333) 99%);
+    border-radius: 0.95rem 0.95rem 5rem 0.95rem;
+    box-shadow: 0 0 0.62rem #0007, 0.063rem 0 0.62rem 0.2rem #0008 inset; }
